@@ -19,7 +19,7 @@ cd redcow.club
 git checkout gh-pages
 
 # copy new site into gh-pages branch
-cp ../build/* ./
+cp -R ../build/* ./
 
 # commit new site
 git config user.email "rsuper@sonic.net"
