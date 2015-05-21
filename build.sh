@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 # Some of this is copyright @eshepelyuk from GitHub and can be found at https://eshepelyuk.github.io/2014/10/28/automate-github-pages-travisci.html
+# The rest of this is copyright sgoblin with the Apache 2 license, which can be found at: http://www.apache.org/licenses/LICENSE-2.0
 
 # only proceed script when started not by pull request (PR)
 if [ $TRAVIS_PULL_REQUEST == "true" ]; then
