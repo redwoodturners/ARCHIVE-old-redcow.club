@@ -27,4 +27,5 @@ git config user.email "rsuper@sonic.net"
 git config user.name "sgoblin"
 git add -A .
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
-git push --quiet origin master > /dev/null 2>&1
+echo "starting push"
+git push --quiet origin master > /dev/null 2>&1 && echo "done with push"
