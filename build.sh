@@ -30,4 +30,4 @@ echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 git add -A .
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
 echo "starting push"
-git push origin master && rm .git/credentials
+git push origin gh-pages && rm .git/credentials
