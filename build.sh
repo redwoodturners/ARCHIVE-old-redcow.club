@@ -15,7 +15,7 @@ set -e
 bundle exec middleman build
 
 # clone gh-pages branch of site
-git clone https://${GH_TOKEN}@github.com/sgoblin/redcow.club.git
+git clone https://github.com/sgoblin/redcow.club.git
 cd redcow.club
 git checkout gh-pages
 
@@ -25,7 +25,9 @@ cp -R ../build/* ./
 # commit new site
 git config user.email "rsuper@sonic.net"
 git config user.name "sgoblin"
+git config credential.helper "store --file=.git/credentials"
+echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 git add -A .
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
 echo "starting push"
-git push --quiet origin master > /dev/null 2>&1
+git push origin master && rm .git/credentials
