@@ -28,4 +28,4 @@ git config user.name "sgoblin"
 git add -A .
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
 echo "starting push"
-git push --quiet origin master > /dev/null 2>&1 && echo "done with push"
+git push --quiet origin master > /dev/null 2>&1
