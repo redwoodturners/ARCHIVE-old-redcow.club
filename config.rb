@@ -35,9 +35,16 @@
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
+# Check if this is on Codio
+if ENV['CODIO_HOSTNAME']==''
+  livereload_hostname = Socket.ip_address_list.find(->{ Addrinfo.ip 'localhost' }, &:ipv4_private?).ip_address
+else
+  livereload_hostname = ENV['CODIO_HOSTNAME'] + ".codio.io"
+end
+
 # Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload, no_swf:true
+  activate :livereload, no_swf:true, :host => livereload_hostname
 end
 
 # Methods defined in the helpers block are available in templates
