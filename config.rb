@@ -36,7 +36,7 @@
 # activate :automatic_image_sizes
 
 # Check if this is on Codio
-if ENV['CODIO_HOSTNAME']==''
+if ENV['CODIO_HOSTNAME']==nil
   livereload_hostname = Socket.ip_address_list.find(->{ Addrinfo.ip 'localhost' }, &:ipv4_private?).ip_address
 else
   livereload_hostname = ENV['CODIO_HOSTNAME'] + ".codio.io"
