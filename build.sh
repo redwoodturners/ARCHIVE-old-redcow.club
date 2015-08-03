@@ -11,16 +11,14 @@ fi
 # enable error reporting to the console
 set -e
 
-# build site
-bundle exec middleman build
+# Install bourbon
+cd source && bundle exec bourbon install && cd ../
 
 # clone gh-pages branch of site
-git clone https://github.com/sgoblin/redcow.club.git
-cd redcow.club
-git checkout gh-pages
+git clone https://github.com/redwoodturners/www.redcow.club.git build
 
-# copy new site into gh-pages branch
-cp -R ../build/* ./
+# build site
+bundle exec middleman build
 
 # commit new site
 git config user.email "rsuper@sonic.net"

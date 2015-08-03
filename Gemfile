@@ -12,3 +12,6 @@ gem "middleman-livereload"#, "~> 3.3.0"
 
 # Windows does not come with time zone data
 gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
+
+# Bourbon mixins from thoughtbot -- thanks!
+gem "bourbon"
