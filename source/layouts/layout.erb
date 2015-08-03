@@ -9,11 +9,64 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "The Middleman" %></title>
 
-    <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css", "all", "redcow-main" %>
-    <%= javascript_include_tag  "all" %>
+    <%= stylesheet_link_tag "https://cdn.jsdelivr.net/fontawesome/4.4.0/css/font-awesome.css", "https://cdn.jsdelivr.net/normalize/3.0.3/normalize.min.css", "https://cdn.jsdelivr.net/ink/3.1.9/css/ink-flex.min.css", "redcow-main"%>
+    <!--[if lt IE 9 ]>
+      <link rel="stylesheet" href="https://ink.global.ssl.fastly.net/3.1.9/css/ink-ie.min.css" type="text/css">
+    <![endif]-->
   </head>
 
   <body class="<%= page_classes %>">
+    <div class="topbar">
+      <nav class="ink-navigation ink-grid">
+        <ul class="menu horizontal black push-left medium-push-center small-push-center tiny-push-center">
+           <li class="hide-all show-tiny show-small show-medium"><button class="fa fa-bars left-drawer-trigger"></button></li>
+           <li class="logoPlaceholder"><a href="/" class="logoPlaceholder">RedCoW</a></li>
+        </ul>
+        <ul class="menu horizontal black push-right medium-push-center small-push-center tiny-push-center linksmenu">
+          <li>
+            <a href="/outreach">Outreach</a>
+            <ul class="submenu">
+              <li>
+                <a href="/outreach#MMS">MMS</a>
+              </li>
+              <li>
+                <a href="/outreach#rotary">Rotary Club</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/about">About</a>
+            <ul class="submenu">
+              <li>
+                About Us
+              </li>
+              <li>
+                Events
+              </li>
+              <li>
+                Bylaws
+              </li>
+              <li>
+                Contact
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/gallery">Gallery</a>
+          </li>
+          <li>
+            <a href="https://forum.redcow.club">Forum</a>
+          </li>
+          <li>
+            <a href="/newsletters">Newsletters</a>
+          </li>
+          <li>
+            <a href="https://ww2.redcow.club">Members Area</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <%= yield %>
+    <%= javascript_include_tag "https://cdn.jsdelivr.net/ink/3.1.9/js/ink-all.min.js", "all" %>
   </body>
 </html>
