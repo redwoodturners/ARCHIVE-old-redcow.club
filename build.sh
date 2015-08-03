@@ -19,6 +19,7 @@ git clone https://github.com/redwoodturners/www.redcow.club.git build
 
 # build site
 bundle exec middleman build
+cd build
 
 # commit new site
 git config user.email "rsuper@sonic.net"
