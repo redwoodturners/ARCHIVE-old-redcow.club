@@ -15,11 +15,11 @@ set -e
 cd source && bundle exec bourbon install && cd ../
 
 # clone gh-pages branch of site
-git clone https://github.com/redwoodturners/www.redcow.club.git build
+git clone https://github.com/redwoodturners/www.redcow.club.git ../build
 
 # build site
 bundle exec middleman build
-cd build && git checkout gh-pages
+cp -R build ../ && cd ../build
 
 # commit new site
 git config user.email "rsuper@sonic.net"
