@@ -1,0 +1,16 @@
+$topcolor: #1a1a1a;
+
+.topbar {
+  background: $topcolor;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  transform: scale3d(1, 1, 1);
+  width: 100%;
+  z-index: 100;
+}
+
+.topspacer {
+  height: 50px;
+  width: 100%;
+}
