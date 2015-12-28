@@ -1,4 +1,5 @@
 $topcolor: #1a1a1a;
+$cover: url(/images/4011522811_efbe90dba1_o-1536.jpg);
 
 .topbar {
   background: $topcolor;
@@ -13,4 +14,23 @@ $topcolor: #1a1a1a;
 .topspacer {
   height: 50px;
   width: 100%;
+}
+
+h1 {
+  font-family: 'Source Sans Pro';
+}
+
+.main-cover {
+  background-image: $cover;
+  height: 500px;
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-size: 5em;
+  padding: 0px 25%;
+}
+
+.who-we-are {
+  border-right: 2px solid;
 }
