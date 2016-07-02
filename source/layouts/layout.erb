@@ -9,7 +9,7 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "The Middleman" %></title>
 
-    <%= stylesheet_link_tag "https://cdn.jsdelivr.net/normalize/3.0.3/normalize.min.css", "https://cdn.jsdelivr.net/ink/3.1.10/css/ink-flex.min.css", "https://cdn.jsdelivr.net/fontawesome/4.5.0/css/font-awesome.min.css", "redcow-main"%>
+    <%= stylesheet_link_tag "https://cdn.jsdelivr.net/normalize/3.0.3/normalize.min.css", "https://cdn.jsdelivr.net/ink/3.1.10/css/ink-flex.min.css", "https://cdn.jsdelivr.net/fontawesome/4.6.3/css/font-awesome.min.css", "redcow-main"%>
     <!--[if lt IE 9 ]>
       <link rel="stylesheet" href="https://ink.global.ssl.fastly.net/3.1.10/css/ink-ie.min.css" type="text/css">
     <![endif]-->
@@ -23,6 +23,7 @@
            <li class="logoPlaceholder"><a href="/" class="logoPlaceholder">RedCoW</a></li>
         </ul>
         <ul class="menu horizontal black push-right medium-push-center small-push-center tiny-push-center linksmenu">
+          <!-- NOCONTENT
           <li>
             <a href="/outreach">Outreach</a>
             <ul class="submenu">
@@ -62,12 +63,13 @@
           </li>
           <li>
             <a href="https://ww2.redcow.club">Members Area</a>
-          </li>
+          </li>-->
         </ul>
       </nav>
     </div>
     <div class="topspacer"></div>
     <%= yield %>
-    <%= javascript_include_tag "https://cdn.jsdelivr.net/ink/3.1.10/js/ink-all.min.js", "all" %>
+    <%= javascript_include_tag "https://cdn.jsdelivr.net/g/ink@3.1.10(js/ink-all.min.js+js/autoload.min.js)", "all" %>
+    <div class="top-space bottom-space align-center"><i>This website is under construction. Information may be missing or incorrect.</i></div>
   </body>
 </html>
