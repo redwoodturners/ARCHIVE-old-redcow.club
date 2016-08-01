@@ -77,3 +77,8 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+# For newsletters activate blog
+#activate :blog do |blog|
+#  blog.prefix = "newsletters"
+#end

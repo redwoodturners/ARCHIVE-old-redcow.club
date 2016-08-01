@@ -15,3 +15,6 @@ gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 
 # Bourbon mixins from thoughtbot -- thanks!
 gem "bourbon"
+
+# Blog extension for newsletters
+#gem "middleman-blog"
